@@ -1,0 +1,42 @@
+---
+title: "Q8"
+output: html_document
+date: "2022-09-26"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(canlang)
+library(tidyverse)
+```
+
+# Top 5 languages spoken at home from Vancouver
+
+Making use of `canlang` to generate the data below:
+
+```{r, echo=FALSE}
+v_population <- filter(region_data, region == "Vancouver") |> pull(population)
+v_data <- filter(region_lang, region == "Vancouver") |>
+ arrange(desc(most_at_home)) |>
+ slice(1:5) |>
+ mutate(perc_pop = most_at_home / v_population * 100) |>
+ select(language, perc_pop)
+v_data
+```
+
+# Top 10 region with highest % of people claiming Canonese as mother tongue
+
+Similarly, `canlang` is used to generate the table below:
+
+```{r, echo=FALSE}
+selected_lang <- region_lang |> 
+ filter(language == "Cantonese")
+
+selected_lang_pop <- left_join(selected_lang, region_data) |> 
+ mutate(mother_tongue_perc = mother_tongue / population * 100) |> 
+ select(region, mother_tongue_perc) |> 
+ arrange(desc(mother_tongue_perc)) |> 
+ slice(1:10)
+
+selected_lang_pop
+```
