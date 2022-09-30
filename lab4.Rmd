@@ -86,7 +86,7 @@ To render the HTML files we are going to create, the first step is to activate G
 
 ```
 
-YOUR ANSWER GOES HERE
+<https://github.com/markusnam/521_lab4/deployments/activity_log?environment=github-pages>
 
 ```{block, type="alert alert-info"}
 #### Question 2
@@ -114,14 +114,12 @@ Don't forget to knit/render the document
 after you make this change to ensure everything is still working.
 ```
 
-```{r, square_function}
+```{r square_function}
 
 square <- function (n) {
     n^2
 }
 ```
-
-YOUR ANSWER GOES HERE
 
 ```{block, type="alert alert-info"}
 #### Question 4
@@ -208,8 +206,10 @@ and edit it so that you include an `author` (yourself) and a `date` (lab due dat
 Include what you added below here as well as a fenced Markdown code block.
 ```
 
+    ---
     author: "Markus Nam"
     date: "Oct 1 2022""
+    ---
 
 ### Creating R Markdown documents
 
@@ -248,7 +248,9 @@ to the GitHub repository for this lab
 and paste the two links below this question.
 ```
 
-YOUR ANSWER GOES HERE
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_chnam/blob/master/q7.html>
+
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_chnam/blob/master/q7.pdf>
 
 ```{block, type="alert alert-info"}
 #### Question 8
@@ -267,7 +269,9 @@ rubric={mechanics:6}
    Paste a link to these files as your answer below.
 ```
 
-YOUR ANSWER GOES HERE
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_chnam/blob/master/q8_canlang_summary.Rmd>
+
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_chnam/blob/master/q8_canlang_summary.html>
 
 ```{block, type="alert alert-info"}
 #### Question 9 (Optional)
@@ -281,7 +285,8 @@ rubric={mechanics:1,reasoning:1}
    What do you see? How is it rendered?
 ```
 
-YOUR ANSWER GOES HERE
+`.md` is rendered perfectly on `github` as opposed to `.html` which is
+shown as raw html code.
 
 ```{block, type="alert alert-info"}
 #### Question 10
@@ -308,7 +313,7 @@ rubric={mechanics:6}
 5. Activate GitHub pages and paste the link below.
 ```
 
-YOUR ANSWER GOES HERE
+<https://markusnam.github.io/521_lab4/>
 
 ```{block, type="alert alert-info"}
 #### (Challenging) Question 11
@@ -323,4 +328,24 @@ for presentations and reports.
 Include advantages and disadvantages for each.
 ```
 
-YOUR ANSWER GOES HERE
+Advantages of using reproducible tools (e.g. R Markdown and Jupyter)
+
+-   Documents are in plain text file which can be easily edited by using the simplest editor such as `notepad` or `vi`.
+
+-   Support of code chunks/cells allows dynamically generate tables/figures/etc.
+
+-   Multiple languages are supported (e.g. `Python` and `R`).
+
+-   Support of LaTeX enables easier editing of Mathematical formula.
+
+-   Multiple output formats are supported (e.g. `.html`, `.pdf` and `.md`) \* Markdown codes are simple and human readable.
+
+Disadvantages of using reproducible tools
+
+-   Not as "what you see is what you get" as non-reproducible tools (e.g. Word and Powerpoint).
+
+-   Not as commonly used by the public (e.g. in a business organization).
+
+-   Implementations of markdown have diverged. i.e. output is not unified even if the same markdown is used.
+
+-   Too many versions of markdown with slight differences. i.e. not friendly to non-tech users.
