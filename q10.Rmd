@@ -3,9 +3,10 @@ title: "DSCI_521 Lab 4"
 subtitle: "<br/>Question 10"
 author: "Markus Nam"
 institute: "MDS, UBC"
-date: "Sep 29, 2022"
+date: "Sep 30, 2022"
 output:
   xaringan::moon_reader:
+    self_contained: true
     lib_dir: libs
     nature:
       highlightStyle: github
