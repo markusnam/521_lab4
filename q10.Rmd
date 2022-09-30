@@ -6,15 +6,13 @@ institute: "MDS, UBC"
 date: "Sep 30, 2022"
 output:
   xaringan::moon_reader:
-    self_contained: true
+#    self_contained: true
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
-
-class: inverse
 
 # Making use of Canlang data
 
@@ -31,8 +29,6 @@ class: inverse
 - Top 3 language as mother tongue in Vancouver
 
 ---
-
-class: inverse
 
 # Top 5 languages spoken at home from Toronto
 
@@ -54,8 +50,6 @@ v_data
 
 ---
 
-class: inverse
-
 # Top 10 region with highest % of people claiming Japanese as mother tongue
 
 --
@@ -75,14 +69,12 @@ selected_lang_pop
 
 ---
 
-class: inverse
-
-# Top 3 languages as mother tongue in Vancouver
+## Top 3 languages as mother tongue in Vancouver
 
 --
 
 ```{r top 3 mother tongue in Vancouver, echo=FALSE}
 population <- filter(region_data, region == "Vancouver") |> select(population) |> pull()
 top3 <- region_lang |> filter(region == "Vancouver") |> arrange(desc(mother_tongue)) |> mutate(perc = mother_tongue / population * 100) |> slice(1:3)
-barplot(top3$perc, names.arg=top3$language)
+barplot(top3$perc, names.arg=top3$language, xlab="percentage", ylab="languages", hori = TRUE)
 ```
